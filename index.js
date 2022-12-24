@@ -27,8 +27,18 @@ addItems.style.color = "green";
     
 // }
 
-secondListItem = document.querySelector(".list-group-item:nth-child(2)");
-secondListItem.style.backgroundColor = "green";
+// secondListItem = document.querySelector(".list-group-item:nth-child(2)");
+// secondListItem.style.backgroundColor = "green";
 
-thirdListItem = document.querySelector(".list-group-item:nth-child(3)");
-thirdListItem.style.display = "none";
+// thirdListItem = document.querySelector(".list-group-item:nth-child(3)");
+// thirdListItem.style.display = "none";
+
+listItems = document.querySelectorAll(".list-group-item");
+console.log(listItems);
+listItems[1].style.color = "green";
+
+
+oddListItems = document.querySelectorAll(".list-group-item:nth-child(odd)");
+oddListItems.forEach(oddListItem => {
+    oddListItem.style.backgroundColor = "green";
+});
